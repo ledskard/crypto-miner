@@ -21,7 +21,9 @@ def Salad_Mining():
         if norm:
             os.system(
                 r" sudo ../miners/PhoenixMiner/PhoenixMiner -logfile phoenixlog.txt -rmode 0 -rvram 1 -pool"
+                print('connected to phoenix')
                 r" stratum+tcp://daggerhashimoto.usa.nicehash.com:3353 -pool2"
+                print('starting pool')
                 r" stratum+tcp://daggerhashimoto.eu.nicehash.com:3353 -ewal " + (
                     wallet) + " -esm 3 -allpools 1 -allcoins 0")
         else:
@@ -36,7 +38,7 @@ def Salad_Mining():
         sys.stdout.write("\x1b]2;Mining ethash with T-Rex miner\x07")
         if norm:
             os.system(
-                r"miners/t-rex/t-rex -a ethash -o"
+                r"../miners/t-rex/t-rex -a ethash -o"
                 r" stratum+tcp://daggerhashimoto.usa.nicehash.com:3353"
                 rf" -u {wallet}")
         else:
