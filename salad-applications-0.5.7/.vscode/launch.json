@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Web App",
+      "type": "chrome",
+      "request": "launch",
+      "runtimeArgs": ["--disable-web-security"],
+      "url": "http://localhost:3000",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Desktop App",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["start"],
+      "autoAttachChildProcesses": true,
+      "internalConsoleOptions": "openOnFirstSessionStart",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceRoot}/packages/desktop-app"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+SaladCLI+/data.json
+SaladCLI+/config.json
++.idea
++.gitignore
++utils/config.json
++config.json
++utils/__pycache__
+*.pyc
+*.xml
+config.json
+data.json
+phoenixlog.txt
+phoenixlog.txt
+phoenixlog.txt
+.idea/SaladCLIPlus-Linux.iml
